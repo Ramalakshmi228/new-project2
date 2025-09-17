@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Construction Hub</title>
+  <style>
+    
+    :root {
+      --primary-color: #3636af;
+      --secondary-color: #426ac9;
+      --accent-color: #f1c40f;
+      --light-bg: #f9f9f9;
+      --dark-bg: #4d2cc3;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--light-bg);
+      color: #333;
+      line-height: 1.5;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h2, h3 {
+      text-align: center;
+      color: var(--primary-color);
+    }
+
+    .category {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      transition: 0.3s;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+
+    .card small {
+      display: block;
+      color: #666;
+      font-size: 0.85em;
+      margin-top: 4px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Booking form */
+    .booking-form {
+      max-width: 500px;
+      background-color: white;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .booking-form input, .booking-form select, .booking-form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .booking-form button {
+      background-color: #0984e3;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .booking-form button:hover {
+      background-color: #74b9ff;
+    }
+
+    footer {
+      background-color: var(--dark-bg);
+      color: white;
+      padding: 30px 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 10px;
+      color: var(--accent-color);
+    }
+
+    .footer-section a {
+      color: #f1f1f1;
+      text-decoration: none;
+      display: block;
+      margin: 4px 0;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-card {
+      background-color: white;
+      border-left: 5px solid #3498db;
+      padding: 15px;
+      margin: 10px auto;
+      border-radius: 5px;
+      max-width: 400px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .worker-table {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    .worker-table th, .worker-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .worker-table th {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Builder's Choice</h1>
+  <p>All your building needs in one place!</p>
+  <nav>
+    <a href="p2.html" style="color: white; margin: 0 15px;">Home</a>
+    <a href="materials.html" style="color: white; margin: 0 15px;">Materials</a>
+    <a href="booking.html" style="color: white; margin: 0 15px;">Book Now</a>
+    <a href="cart.html" style="color: white; margin: 0 15px;">Cart</a>
+</header>
+
+<!-- Construction Materials -->
+<section>
+  <h2>🏗️ Construction Materials</h2>
+
+  <h3>🧱 Basic Structural Materials</h3>
+  <div class="category">
+    <div class="card"><a style="text-decoration: none;color: black;" href="briks2.html"><img src="https://tse3.mm.bing.net/th/id/OIP.ROk_J2SkawDa0djri7LcJgHaFs?pid=Api&P=0&h=200" alt="Bricks"><p>Bricks</p><small>Bricks Co., RedStone Bricks, BuildStrong</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="cement.html"><img src="https://tse4.mm.bing.net/th/id/OIP.qEeKJzB7BWlNXfPFgFLXXgHaDt?pid=Api&P=0&h=220" alt="Cement"><p>Cement</p><small>UltraTech, ACC, Ambuja</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="concrete.html"><img src="https://tse1.mm.bing.net/th/id/OIP.eOdLKyvpQhv9-JXcNPZ1WgHaEU?pid=Api&P=0&h=220" alt="Concrete"><p>Concrete</p><small>ReadyMix Ltd., BuildPro, Concretex</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="sand.html"><img src="https://tse3.mm.bing.net/th/id/OIP.QgQgUs69FkYZlv65WEBaiAHaEK?pid=Api&P=0&h=220" alt="Sand"><p>Sand</p><small>RiverGold, SandMasters, PureBuild Sand</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="gravel.html"><img src="https://lalandscapesupply.com/wp-content/uploads/2023/05/black-basalt-gravel-3.jpg" alt="Gravel"><p>Gravel</p><small>GravelX, RockSolid, StoneHub</small></a></div>
+  </div>
+
+  <h3>🪵 Wood & Timber</h3>
+  <div class="category">
+    <div class="card"><a style="text-decoration: none;color: black;" href="playwood.html"><img src="https://i.pinimg.com/originals/2e/e4/3e/2ee43edf84d602d7e59fd93a3cd89416.jpg" alt="Plywood"><p>Plywood</p><small>Greenply, CenturyPly, Kitply</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="hardwood.html"><img src="https://maggdens.com/wp-content/uploads/2022/10/Premium-hardwood-types-for-long-burning-firewood-delivery-services-in-NJ-scaled.jpeg" alt="Hardwood"><p>Hardwood</p><small>WoodMasters, TimberPro, RoyalWood</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="softwood.html"><img src="https://tse3.mm.bing.net/th/id/OIP.MprRBbsU7fqB3S4Vu7x49AHaFj?pid=Api&P=0&h=220" alt="Softwood"><p>Softwood</p><small>EverWood, PureTimber, BuildWood</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="mdf.html"><img src="https://tse1.mm.bing.net/th/id/OIP.LRRVf11oNOx_P_K_eRuhKQHaHa?pid=Api&P=0&h=220" alt="MDF"><p>MDF</p><small>Action TESA, GreenPanel, Duratuff</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="laminate.html"><img src="https://50floor.com/content/uploads/2022/11/walnut-waterproof-laminate-1536x1352.jpg" alt="Laminates"><p>Laminates</p><small>Merino, Greenlam, RoyalTouch</small></a></div>
+  </div>
+
+  <h3>💡 Electrical Materials</h3>
+  <div class="category">
+    <div class="card"><a style="text-decoration: none;color: black;" href="wires.html"><img src="https://media.istockphoto.com/id/133988654/photo/lot-of-wire.jpg?s=612x612&w=0&k=20&c=ctwXtVkjn8eMI59C341R8Q2lXv_pli2c6BdYuP_t_yw=" alt="Wires"><p>Wires & Cables</p><small>Havells, Polycab, Finolex</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="switches.html"><img src="https://www.bhg.com/thmb/ks9Bdk9-kBw9XRryTZqxzOmJSIU=/5236x0/filters:no_upscale():strip_icc()/BHG-home-improvement-electrical-guide-to-light-switches-and-dimmers-hero_31187-e8349e7ac5f84023ab572db07231401a.jpg" alt="Switches"><p>Switches</p><small>Anchor, Legrand, GM Modular</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="led.html"><img src="https://www.lampsplus.com/ideas-and-advice/wp-content/uploads/2020/09/LED_Light_Bulbs_Image.jpg" alt="LED Lights"><p>LED Lights</p><small>Philips, Syska, Havells</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="sockets.html"><img src="https://en.pimg.jp/090/581/169/1/90581169.jpg" alt="Sockets"><p>Sockets</p><small>Schneider, Anchor, Goldmedal</small></a></div>
+  </div>
+
+  <h3>🧯 Plumbing & Sanitary</h3>
+  <div class="category">
+    <div class="card"><a style="text-decoration: none;color: black;" href="pvc.html"><img src="https://varunpiping.com/images/products/Varun-Rigid-PVC-Pipes-01.jpg" alt="PVC Pipes"><p>PVC Pipes</p><small>Astral, Finolex, Supreme</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="cpvc.html"><img src="https://tse1.mm.bing.net/th/id/OIP.358zh26sNWVqGrbNxxEzpQHaGh?pid=Api&P=0&h=220" alt="CPVC Pipes"><p>CPVC Pipes</p><small>Astral, Prince, Supreme</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="toilet.html"><img src="https://tse1.mm.bing.net/th/id/OIP.jVzbgITqTrQDxBo-ZEU9WgHaDt?pid=Api&P=0&h=220" alt="Toilets"><p>Toilets</p><small>Cera, Hindware, Parryware</small></a></div>
+    <div class="card"><a style="text-decoration: none;color: black;" href="basins.html"><img src="https://image.made-in-china.com/2f0j00TPfbhVoghvkJ/Matte-Green-Color-Wash-Basin-Luxury-Basins-Wash-Basin-Waste-Counter-Basin-Ceramic-Washroom-Ceramic-Sinks-Art-Basin-Counter-Top-Basin.jpg" alt="Basins"><p>Basins</p><small>Jaquar, Hindware, Cera</small></div>
+  </div>
+</section>
+
+<!-- Booking Section -->
+<div class="booking-form">
+  <h2>📝 Book Materials</h2>
+  <form id="bookingForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <select name="material" id="materialSelect" required>
+      <option value="">Select Material</option>
+      <option>Bricks</option>
+      <option>Cement</option>
+      <option>Concrete</option>
+      <option>Sand</option>
+      <option>Gravel</option>
+      <option>Plywood</option>
+      <option>Hardwood</option>
+      <option>Softwood</option>
+      <option>MDF</option>
+      <option>Laminates</option>
+      <option>Wires & Cables</option>
+      <option>Switches</option>
+      <option>LED Lights</option>
+      <option>Sockets</option>
+      <option>PVC Pipes</option>
+      <option>CPVC Pipes</option>
+      <option>Toilets</option>
+      <option>Basins</option>
+    </select>
+    <select name="company" id="companySelect" required>
+      <option value="">Select Company</option>
+    </select>
+    <input type="number" name="quantity" placeholder="Quantity (e.g. 100 units)" required />
+    <button type="submit">Submit Booking</button>
+  </form>
+</div>
+<footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>builders choice provides all essential materials and workforce for residential and commercial buildings.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p>📞 +91 9001234567<br>📧 info@builders choice.com</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">Materials</a>
+        <a href="#">Book Now</a>
+      </div>
+    </div>
+    <p style="margin-top: 20px;">&copy; 2025 builders choice. All Rights Reserved.</p>
+  </footer>
+
+<script>
+  const materialCompanies = {
+    "Bricks": ["ABC Bricks Co.", "RedStone Bricks", "BuildStrong"],
+    "Cement": ["UltraTech", "ACC", "Ambuja"],
+    "Concrete": ["ReadyMix Ltd.", "BuildPro", "Concretex"],
+    "Sand": ["RiverGold", "SandMasters", "PureBuild Sand"],
+    "Gravel": ["GravelX", "RockSolid", "StoneHub"],
+    "Plywood": ["Greenply", "CenturyPly", "Kitply"],
+    "Hardwood": ["WoodMasters", "TimberPro", "RoyalWood"],
+    "Softwood": ["EverWood", "PureTimber", "BuildWood"],
+    "MDF": ["Action TESA", "GreenPanel", "Duratuff"],
+    "Laminates": ["Merino", "Greenlam", "RoyalTouch"],
+    "Wires & Cables": ["Havells", "Polycab", "Finolex"],
+    "Switches": ["Anchor", "Legrand", "GM Modular"],
+    "LED Lights": ["Philips", "Syska", "Havells"],
+    "Sockets": ["Schneider", "Anchor", "Goldmedal"],
+    "PVC Pipes": ["Astral", "Finolex", "Supreme"],
+    "CPVC Pipes": ["Astral", "Prince", "Supreme"],
+    "Toilets": ["Cera", "Hindware", "Parryware"],
+    "Basins": ["Jaquar", "Hindware", "Cera"]
+  };
+
+  const materialSelect = document.getElementById("materialSelect");
+  const companySelect = document.getElementById("companySelect");
+
+  materialSelect.addEventListener("change", function() {
+    const companies = materialCompanies[this.value] || [];
+    companySelect.innerHTML = '<option value="">Select Company</option>';
+    companies.forEach(c => {
+      const option = document.createElement("option");
+      option.value = c;
+      option.textContent = c;
+      companySelect.appendChild(option);
+    });
+  });
+
+  document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const details = Object.fromEntries(formData.entries());
+    alert(`✅ Booking Confirmed!\nName: ${details.name}\nPhone: ${details.phone}\nMaterial: ${details.material}\nCompany: ${details.company}\nQuantity: ${details.quantity}`);
+    this.reset();
+    companySelect.innerHTML = '<option value="">Select Company</option>';
+  });
+</script>
+
+</body>
+</html>
